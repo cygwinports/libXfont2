@@ -1,0 +1,19 @@
+inherit xorg
+
+NAME="libXfont2"
+VERSION=2.0.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="X.Org font library"
+DESCRIPTION="libXfont provides the core of the legacy X11 font system, handling
+the index files (fonts.dir, fonts.alias, fonts.scale), the various font file
+formats, and rasterizing them.   It is used by the X servers, the X Font Server
+(xfs), and some font utilities (e.g. bdftopcf), but should not be used by
+normal X11 clients.  X11 clients access fonts via either the new APIs in
+libXft, or the legacy APIs in libX11."
+
+PKG_NAMES="${NAME}_2 ${NAME}-devel"
+libXfont2_2_CONTENTS='usr/bin/cygXfont2-2.dll usr/share/doc/'
+libXfont2_devel_CONTENTS='usr/include/ usr/lib/'
+
+CYGCONF_ARGS="--with-bzip2"
